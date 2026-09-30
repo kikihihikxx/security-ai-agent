@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "security_agent": "./src/security_agent_v2/graph.py:studio_app"
+  },
+  "env": ".env"
+}

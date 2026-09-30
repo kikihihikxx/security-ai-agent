@@ -1,0 +1,37 @@
+[project]
+name = "security-agent-v2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kikihihikxx", email = "jkk3366@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-openai>=1.6.2",
+    "langgraph>=1.2.11",
+    "fastapi>=0.115.0",
+    "python-dotenv>=1.2.3",
+    "pydantic>=2.0.0",
+    "a2a-sdk[http-server]>=0.3.22,<1.0",
+    "langgraph-checkpoint-postgres>=3.0.0",
+    "langgraph-checkpoint-sqlite>=2.0.0",
+    "psycopg[binary,pool]>=3.2.0",
+    "uvicorn>=0.34.0",
+    "chainlit>=2.9.0,<3.0",
+    "langchain-google-genai>=2.0.0",
+    "fastmcp>=2.12,<3",
+]
+
+[project.scripts]
+security-agent-v2 = "security_agent_v2:main"
+security-agent-v2-server = "security_agent_v2.api:run"
+
+[dependency-groups]
+dev = [
+    "langgraph-cli[inmem]>=0.4.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"

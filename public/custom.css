@@ -1,0 +1,52 @@
+body {
+  font-feature-settings: "ss01" on;
+}
+
+.security-agent-prompt-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: min(100%, 52rem);
+  margin: 0 auto 0.5rem;
+  padding: 0 0.75rem;
+}
+
+.security-agent-prompt-examples__label {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.security-agent-prompt-examples__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.security-agent-prompt-examples__list button {
+  border: 1px solid hsl(var(--border));
+  border-radius: 9999px;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.security-agent-prompt-examples__list button:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--accent));
+}
+
+.security-agent-prompt-examples__list button:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .security-agent-prompt-examples {
+    padding: 0 0.5rem;
+  }
+}
